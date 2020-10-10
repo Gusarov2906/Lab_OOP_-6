@@ -1,7 +1,0 @@
-6 
-Andrey Gusarov Aleksandrovich Common_worker 30000 1 Chip_0402 50 5 0 0 0 
-Andrey Gusarov Aleksandrovich Common_worker 30000 1 Chip_0603 25 7.25 0 0 0 
-Alesha Mishin Alekseevich Common_worker 25000 1 Chip_0402_new 125 5.25 0 0 0 
-Sasha Mishin Alekseevich Superior 60000 1 Microphone 2 98.1 0 0 0 
-Lilya Ryazanova Valerievna Intern 15000 2 Books 5 0.52 31 12 7 
-Sasha Mishin Alekseevich Superior 60000 1 Microphone(new) 3 198.12 0 0 0 
