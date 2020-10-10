@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"lab2.main","l":"Main"},{"p":"lab2.main","l":"Menu.MaxIntException"},{"p":"lab2.main","l":"Menu"},{"p":"lab2.main","l":"Menu.NegIntException"}]
