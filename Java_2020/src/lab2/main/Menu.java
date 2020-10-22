@@ -115,7 +115,7 @@ public final class Menu {
 		cmd = readPosInt(scanner);
 		if (cmd > maxNumCmd)
 		{
-			throw new MaxIntException("Number shouldn't be less then" + maxNumCmd + " !");
+			throw new MaxIntException("Number shouldn't be less then " + maxNumCmd + " !");
 		}
 		}
 		catch (MaxIntException e) {
@@ -138,10 +138,10 @@ public final class Menu {
 	{
 		for(int i = 0; i < array.size(); i++)
 		{
-			System.out.print(i+ ") ");
+			System.out.print(i+ ": ");
 			array.get(i).view();
+			System.out.println();
 		}
-		System.out.println();
 	}
 	
 	/**
@@ -198,10 +198,7 @@ public final class Menu {
 	 * @param arrayMeshAviary - array with mesh aviaries.
 	 * @param arrayInfraredLightedAviary - array with infrared lighted aviaries.
 	 */
-	public void run(ArrayList<AquariumAviary> arrayAquariumAviary,
-					ArrayList<OpenAirAviary> arrayOpenAirAviary,
-					ArrayList<MeshAviary> arrayMeshAviary,
-					ArrayList<InfraredLightedAviary> arrayInfraredLightedAviary)
+	public Database run(Database db)
 	{
 		Scanner scanner = new Scanner(System.in);
 		
@@ -214,8 +211,9 @@ public final class Menu {
 		System.out.println("2: Create animal");
 		System.out.println("3: Create aviary");
 		System.out.println("4: Move animal");
+		System.out.println("5: Exit");
 		System.out.print("Your cmd: ");
-		cmd = readCmd(scanner,4);
+		cmd = readCmd(scanner,5);
 		switch (cmd) {
 			case 1:
 				clearConsole();
@@ -228,50 +226,42 @@ public final class Menu {
 				System.out.println("5: All");
 				System.out.print("Your cmd: ");
 				cmd = readCmd(scanner,5);
+				clearConsole();
+				System.out.println("AVIARIES LIST");
 				switch (cmd) {
 					case 1:
-						clearConsole();
-						System.out.println("AVIARIES LIST");
-						System.out.println("AQUARIUM: ");
-						arrayView(arrayAquariumAviary);
+						System.out.println("AQUARIUM: \n");
+						arrayView(db.arrayAquariumAviary);
 						break;
 					case 2:
-						clearConsole();
-						System.out.println("AVIARIES LIST");
-						System.out.println("OPEN AIR: ");
-						arrayView(arrayOpenAirAviary);
+						System.out.println("OPEN AIR: \n");
+						arrayView(db.arrayOpenAirAviary);
 						break;
 					case 3:
-						clearConsole();
-						System.out.println("AVIARIES LIST");
-						System.out.println("MESH: ");
-						arrayView(arrayMeshAviary);
+						System.out.println("MESH: \n");
+						arrayView(db.arrayMeshAviary);
 						break;
 					case 4:
-						clearConsole();
-						System.out.println("AVIARIES LIST");
-						System.out.println("INFRARED LIGHTED: ");
-						arrayView(arrayInfraredLightedAviary);
+						System.out.println("INFRARED LIGHTED: \n");
+						arrayView(db.arrayInfraredLightedAviary);
 						break;
 					case 5:
-						clearConsole();
-						System.out.println("AVIARIES LIST");
-						System.out.println("AQUARIUM:");
-						arrayView(arrayAquariumAviary);
-						System.out.println();
-						System.out.println("OPEN AIR:");
-						arrayView(arrayOpenAirAviary);
-						System.out.println();
-						System.out.println("MESH:");
-						arrayView(arrayMeshAviary);
-						System.out.println();
-						System.out.println("INFRARED LIGHTED:");
-						arrayView(arrayInfraredLightedAviary);
-						System.out.println();
+						System.out.println("AQUARIUM:\n");
+						arrayView(db.arrayAquariumAviary);
+						System.out.println("OPEN AIR:\n");
+						arrayView(db.arrayOpenAirAviary);
+						System.out.println("MESH:\n");
+						arrayView(db.arrayMeshAviary);
+						System.out.println("INFRARED LIGHTED:\n");
+						arrayView(db.arrayInfraredLightedAviary);
 						break;
 					default:
 						break;
 				}
+				System.out.println("\nWrite any key to continue:");
+				scanner.nextLine();
+				scanner.nextLine();
+				clearConsole();
 				break;
 			case 2:
 				clearConsole();
@@ -283,34 +273,38 @@ public final class Menu {
 				System.out.println("4: Cold blooded");
 				System.out.print("Your cmd: ");
 				cmd = readCmd(scanner,4);
+				System.out.println("CREATING ANIMAL");
+				clearConsole();
+				getFields(scanner);
 				switch(cmd) {
 					case 1:
-						System.out.println("CREATING ANIMAL");
-						clearConsole();
-						getFields(scanner);
+						if (Waterfowl.defAquariumAviary != db.arrayAquariumAviary.get(0))
+							Waterfowl.defAquariumAviary = db.arrayAquariumAviary.get(0);
 						new Waterfowl(name,type,weight,age);
 						break;
 					case 2:
-						System.out.println("CREATING ANIMAL");
-						clearConsole();
-						getFields(scanner);
+						if (Ungulates.defOpenAirAviary != db.arrayOpenAirAviary.get(0))
+							Ungulates.defOpenAirAviary = db.arrayOpenAirAviary.get(0);
 						new Ungulates(name,type,weight,age);
 						break;
 					case 3:
-						System.out.println("CREATING ANIMAL");
-						clearConsole();
-						getFields(scanner);
+						if (Feathered.defMeshAviary != db.arrayMeshAviary.get(0))
+							Feathered.defMeshAviary = db.arrayMeshAviary.get(0);
 						new Feathered(name,type,weight,age);
 						break;
 					case 4:
-						clearConsole();
-						System.out.println("CREATING ANIMAL");
-						getFields(scanner);
+						if(ColdBlooded.defInfraredLightedAviary != db.arrayInfraredLightedAviary.get(0))
+							ColdBlooded.defInfraredLightedAviary = db.arrayInfraredLightedAviary.get(0);
 						new ColdBlooded(name,type,weight,age);
 						break;
 					default:
 						break;
 				}
+				System.out.println("\nWrite any key to continue:");
+				scanner.nextLine();
+				scanner.nextLine();
+				clearConsole();
+				
 				break;
 			case 3:
 				clearConsole();
@@ -329,20 +323,25 @@ public final class Menu {
 				name = scanner.nextLine();
 				switch (cmd) {
 					case 1:
-						arrayAquariumAviary.add(new AquariumAviary(name));
+						db.arrayAquariumAviary.add(new AquariumAviary(name));
 						break;
 					case 2:
-						arrayOpenAirAviary.add(new OpenAirAviary(name));
+						db.arrayOpenAirAviary.add(new OpenAirAviary(name));
 						break;
 					case 3:
-						arrayMeshAviary.add(new MeshAviary(name));
+						db.arrayMeshAviary.add(new MeshAviary(name));
 						break;
 					case 4:
-						arrayInfraredLightedAviary.add(new InfraredLightedAviary(name));
+						db.arrayInfraredLightedAviary.add(new InfraredLightedAviary(name));
 						break;
 				}
+				System.out.println("\nWrite any key to continue:");
+				scanner.nextLine();
+				clearConsole();
 				break;
+				
 			case 4:
+				clearConsole();
 				System.out.println("From what type of aviary you want to move animal?");
 				System.out.println("1: Aquarium");
 				System.out.println("2: Open Air");
@@ -350,15 +349,15 @@ public final class Menu {
 				System.out.println("4: Infrared Lighted");
 				System.out.print("Your cmd: ");
 				cmd = readCmd(scanner,4);
+				clearConsole();
+				System.out.println("MOVE ANIMAL FROM WHERE");
 				switch (cmd) {
 				case 1:
-					clearConsole();
-					System.out.println("MOVE ANIMAL FROM WHERE");
-					System.out.println("AQUARIUM: ");
-					arrayView(arrayAquariumAviary);
+					System.out.println("AQUARIUM: \n");
+					arrayView(db.arrayAquariumAviary);
 					getMoveCmd(scanner);
 					try {
-						arrayAquariumAviary.get(cmd).getById(id).move(arrayAquariumAviary.get(moveTo));
+						db.arrayAquariumAviary.get(cmd).getById(id).move(db.arrayAquariumAviary.get(moveTo));
 					}
 					catch (Exception e)
 					{
@@ -367,13 +366,11 @@ public final class Menu {
 					
 					break;
 				case 2:
-					clearConsole();
-					System.out.println("MOVE ANIMAL FROM WHERE");
-					System.out.println("OPEN AIR: ");
-					arrayView(arrayOpenAirAviary);
+					System.out.println("OPEN AIR: \n");
+					arrayView(db.arrayOpenAirAviary);
 					getMoveCmd(scanner);
 					try {
-						arrayOpenAirAviary.get(cmd).getById(id).move(arrayOpenAirAviary.get(moveTo));
+						db.arrayOpenAirAviary.get(cmd).getById(id).move(db.arrayOpenAirAviary.get(moveTo));
 					}
 					catch (Exception e)
 					{
@@ -381,13 +378,11 @@ public final class Menu {
 					}
 					break;
 				case 3:
-					clearConsole();
-					System.out.println("MOVE ANIMAL FROM WHERE");
-					System.out.println("MESH: ");
-					arrayView(arrayMeshAviary);
+					System.out.println("MESH: \n");
+					arrayView(db.arrayMeshAviary);
 					getMoveCmd(scanner);
 					try {
-						arrayMeshAviary.get(cmd).getById(id).move(arrayMeshAviary.get(moveTo));
+						db.arrayMeshAviary.get(cmd).getById(id).move(db.arrayMeshAviary.get(moveTo));
 					}
 					catch (Exception e)
 					{
@@ -395,23 +390,29 @@ public final class Menu {
 					}
 					break;
 				case 4:
-					clearConsole();
-					System.out.println("MOVE ANIMAL FROM WHERE");
-					System.out.println("INFRARED LIGHTED: ");
-					arrayView(arrayInfraredLightedAviary);
+					System.out.println("INFRARED LIGHTED: \n");
+					arrayView(db.arrayInfraredLightedAviary);
 					getMoveCmd(scanner);
 					try {
-						arrayInfraredLightedAviary.get(cmd).getById(id).move(arrayInfraredLightedAviary.get(moveTo));
+						db.arrayInfraredLightedAviary.get(cmd).getById(id).move(db.arrayInfraredLightedAviary.get(moveTo));
 					}
 					catch (Exception e)
 					{
 						System.out.println("Exception: " + e.getMessage());
 					}
 					break;
+				default:
+					break;
+			}
+				System.out.println("\nWrite any key to continue:");
+				scanner.nextLine();
+				scanner.nextLine();
+				clearConsole();
+				break;
+			case 5:
+				return db;	
 			default:
 				break;
-			}
-				
 		}
 	}
 	}

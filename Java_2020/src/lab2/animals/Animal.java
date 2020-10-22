@@ -1,5 +1,7 @@
 package lab2.animals;
 
+import java.io.Serializable;
+
 import lab2.aviaries.Aviary;
 
 /**
@@ -8,7 +10,7 @@ import lab2.aviaries.Aviary;
  * Abstract class Animal - parent of classes "Waterfowl", "Feathered", "Ungulates" and "ColdBlooded" 
  *
  */
-public abstract class Animal {
+public abstract class Animal implements Serializable{
 	
 	//Fields
 	
@@ -36,7 +38,7 @@ public abstract class Animal {
 	
 	public void view()
 	{
-		System.out.println(" Id: " + id + " Name: " + name + " Type: " + type + 
+		System.out.println(" Name: " + name + " Type: " + type + 
 						   " Weight: " + weight + " Age: " + age);
 	}
 	

@@ -1,5 +1,6 @@
 package lab2.aviaries;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import lab2.animals.Feathered;
 
@@ -9,7 +10,7 @@ import lab2.animals.Feathered;
  *	Class MeshAviary is aviary for Feathered animals.
  */
 
-public class MeshAviary extends Aviary{
+public class MeshAviary extends Aviary implements Serializable {
 	
 	//Fields
 	/**
@@ -68,11 +69,12 @@ public class MeshAviary extends Aviary{
 	public void view()
 	{
 		super.view();
-		System.out.println("Type         : MeshAviary");
+		System.out.println("Type: MeshAviary");
 		System.out.println("Count animals: " + this.count());
 		System.out.println("Animals:");
 		for (int i = 0; i < array.size(); i++)
 		{
+			System.out.print("	");
 			array.get(i).view();
 		}
 	}

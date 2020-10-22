@@ -1,5 +1,6 @@
 package lab2.aviaries;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import lab2.animals.Ungulates;
 
@@ -9,7 +10,7 @@ import lab2.animals.Ungulates;
  *	Class OpenAirAviary is aviary for Ungilates animals
  */
 
-public class OpenAirAviary extends Aviary {
+public class OpenAirAviary extends Aviary implements Serializable {
 
 	
 	//Fields
@@ -69,11 +70,12 @@ public class OpenAirAviary extends Aviary {
 	public void view()
 	{
 		super.view();
-		System.out.println("Type         : OpenAirAviary");
+		System.out.println("Type: OpenAirAviary");
 		System.out.println("Count animals: " + this.count());
 		System.out.println("Animals:");
 		for (int i = 0; i < array.size(); i++)
 		{
+			System.out.print("	");
 			array.get(i).view();
 		}
 	}

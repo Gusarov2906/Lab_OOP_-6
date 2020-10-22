@@ -1,5 +1,7 @@
 package lab2.animals;
 
+import java.io.Serializable;
+
 import lab2.aviaries.MeshAviary;
 
 /**
@@ -9,7 +11,7 @@ import lab2.aviaries.MeshAviary;
  *
  */
 
-public class Feathered extends Animal {
+public class Feathered extends Animal implements Serializable{
 	
 	// Fields
 	
@@ -102,8 +104,8 @@ public class Feathered extends Animal {
 	
 	public void view()
 	{
-		System.out.println(" Id: " + id + " Name: " + name + " Type: " + type + 
-						   " Weight: " + weight + " Age: " + age);
+		System.out.print(" Id: " + id);
+		super.view();
 	}
 	
 	/**

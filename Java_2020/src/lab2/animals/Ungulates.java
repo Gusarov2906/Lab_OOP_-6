@@ -1,5 +1,7 @@
 package lab2.animals;
 
+import java.io.Serializable;
+
 import lab2.aviaries.OpenAirAviary;
 
 /**
@@ -9,7 +11,7 @@ import lab2.aviaries.OpenAirAviary;
  *
  */
 
-public class Ungulates extends Animal {
+public class Ungulates extends Animal implements Serializable{
 
 	// Fields
 	
@@ -101,8 +103,8 @@ public class Ungulates extends Animal {
 	
 	public void view()
 	{
-		System.out.println(" Id: " + id + " Name: " + name + " Type: " + type + 
-						   " Weight: " + weight + " Age: " + age);
+		System.out.print(" Id: " + id);
+		super.view();
 	}
 	
 	/**

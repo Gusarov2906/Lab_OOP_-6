@@ -1,5 +1,6 @@
 package lab2.aviaries;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import lab2.animals.Animal;
@@ -11,7 +12,7 @@ import lab2.animals.Animal;
  *
  */
 
-public class Aviary {
+public class Aviary  implements Serializable {
 	
 	//Fields
 	
@@ -54,7 +55,7 @@ public class Aviary {
 	
 	public void view()
 	{
-		System.out.println("Name         : " + name);
+		System.out.println(name);
 	}
 	
 	/**

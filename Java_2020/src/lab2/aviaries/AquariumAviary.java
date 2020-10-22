@@ -1,5 +1,6 @@
 package lab2.aviaries;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import lab2.animals.Waterfowl;
 
@@ -11,7 +12,7 @@ import lab2.animals.Waterfowl;
  */
 
 
-public class AquariumAviary extends Aviary{
+public class AquariumAviary extends Aviary implements Serializable {
 
 
 	
@@ -68,11 +69,12 @@ public class AquariumAviary extends Aviary{
 	public void view()
 	{
 		super.view();
-		System.out.println("Type         : AquariumAviary");
+		System.out.println("Type: AquariumAviary");
 		System.out.println("Count animals: " + this.count());
 		System.out.println("Animals:");
 		for (int i = 0; i < array.size(); i++)
 		{
+			System.out.print("	");
 			array.get(i).view();
 		}
 	}
@@ -120,7 +122,6 @@ public class AquariumAviary extends Aviary{
 	{
 		if (this.array.size() != 0)
 			return this.array;
-		else 
-			return null;
+		return null;
 	}
 }

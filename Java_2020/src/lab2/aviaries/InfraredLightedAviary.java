@@ -1,5 +1,6 @@
 package lab2.aviaries;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import lab2.animals.ColdBlooded;
@@ -10,7 +11,7 @@ import lab2.animals.ColdBlooded;
  *	Class InfraredLightedAviary is aviary for ColdBlooded animals.
  */
 
-public class InfraredLightedAviary extends Aviary {
+public class InfraredLightedAviary extends Aviary  implements Serializable {
 	
 	//Fields
 	
@@ -69,11 +70,12 @@ public class InfraredLightedAviary extends Aviary {
 	public void view()
 	{
 		super.view();
-		System.out.println("Type         : InfraredLightedAviary");
+		System.out.println("Type: InfraredLightedAviary");
 		System.out.println("Count animals: " + this.count());
 		System.out.println("Animals:");
 		for (int i = 0; i < array.size(); i++)
 		{
+			System.out.print("	");
 			array.get(i).view();
 		}
 	}

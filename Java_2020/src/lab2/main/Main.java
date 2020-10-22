@@ -1,15 +1,11 @@
 package lab2.main;
 
-import java.util.ArrayList;
-
-import lab2.animals.ColdBlooded;
-import lab2.animals.Feathered;
-import lab2.animals.Ungulates;
-import lab2.animals.Waterfowl;
-import lab2.aviaries.AquariumAviary;
-import lab2.aviaries.InfraredLightedAviary;
-import lab2.aviaries.MeshAviary;
-import lab2.aviaries.OpenAirAviary;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 
 /**
 *
@@ -18,6 +14,52 @@ import lab2.aviaries.OpenAirAviary;
 */
 
 public class Main {
+	
+	public static Database loadFromFile(String fileName, Database db)
+	{
+		 try 
+		 {
+			FileInputStream fis = new FileInputStream(fileName);
+			ObjectInputStream ois = new ObjectInputStream(fis);
+			db = (Database) ois.readObject();
+			ois.close();
+			fis.close();
+		 } 
+		 catch (FileNotFoundException e) 
+		 {
+			System.out.println("Exception: " + e.getMessage());
+		 }
+		 catch (IOException e) 
+		 {
+			System.out.println("Exception: " + e.getMessage());
+		 } 
+		 catch (ClassNotFoundException e) 
+		 {
+			System.out.println("Exception: " + e.getMessage());
+		 }
+		 return db;
+	}
+	
+	public static void saveToFile(String fileName, Database db)
+	{
+		FileOutputStream fos;
+		try {
+			fos = new FileOutputStream(fileName);
+			ObjectOutputStream oos = new ObjectOutputStream(fos);
+			oos.writeObject(db);
+			oos.close();
+			fos.close();
+		} 
+		catch (FileNotFoundException e) 
+		{
+			System.out.println("Exception: " + e.getMessage());
+		} 
+		catch (IOException e) 
+		{
+			System.out.println("Exception: " + e.getMessage());
+		}
+		
+	}
 	
 	/**
 	 * Method 'show_start_info' show info about work and author in console.
@@ -45,18 +87,12 @@ public class Main {
 		
 		Main.showStartInfo();
 		
-		ArrayList<AquariumAviary> arrayAquariumAviary = new ArrayList<AquariumAviary>();
-		ArrayList<OpenAirAviary> arrayOpenAirAviary = new ArrayList<OpenAirAviary>();
-		ArrayList<MeshAviary> arrayMeshAviary = new ArrayList<MeshAviary>();
-		ArrayList<InfraredLightedAviary> arrayInfraredLightedAviary = new ArrayList<InfraredLightedAviary>();
-		
-		arrayAquariumAviary.add(Waterfowl.defAquariumAviary);
-		arrayOpenAirAviary.add(Ungulates.defOpenAirAviary);
-		arrayMeshAviary.add(Feathered.defMeshAviary);
-		arrayInfraredLightedAviary.add(ColdBlooded.defInfraredLightedAviary);
-		
+		Database db = new Database();
+		db.createDefAviaries();
+		db = loadFromFile("database.txt", db);
 		try {
-		menu.run(arrayAquariumAviary,arrayOpenAirAviary, arrayMeshAviary, arrayInfraredLightedAviary);
+		db = menu.run(db);
+		saveToFile("database.txt", db);
 		}
 		catch (Exception e)
 		{
