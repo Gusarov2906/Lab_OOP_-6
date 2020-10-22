@@ -15,6 +15,10 @@ public class ColdBlooded extends Animal implements Serializable{
 	
 	// Fields
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int id;
 	private InfraredLightedAviary aviary;
 	static public InfraredLightedAviary defInfraredLightedAviary = new InfraredLightedAviary();
@@ -91,6 +95,18 @@ public class ColdBlooded extends Animal implements Serializable{
 		this.aviary = newAviary;
 		newAviary.add(this);
 		
+	}
+	
+	/**
+	 * remove - function to remove from aviary.
+	 */
+	
+	public void remove()
+	{
+		if (this.aviary != null && this.aviary.getArray() != null)
+		{
+		this.aviary.remove(id);
+		}	
 	}
 	
 	/**

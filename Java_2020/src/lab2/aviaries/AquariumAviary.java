@@ -18,6 +18,10 @@ public class AquariumAviary extends Aviary implements Serializable {
 	
 	//Fields
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	static int defaultNumber = 0;
 	/**
 	 * array - array with waterfowl which lives in aquarium aviary.
@@ -70,7 +74,6 @@ public class AquariumAviary extends Aviary implements Serializable {
 	{
 		super.view();
 		System.out.println("Type: AquariumAviary");
-		System.out.println("Count animals: " + this.count());
 		System.out.println("Animals:");
 		for (int i = 0; i < array.size(); i++)
 		{
@@ -96,7 +99,7 @@ public class AquariumAviary extends Aviary implements Serializable {
 	}
 	
 	/**
-	 * getById - fuction to get animal from array by id.
+	 * getById - function to get animal from array by id.
 	 * @param id - id of  animal in aviary.
 	 * @return Function returns animal with id from param.
 	 */

@@ -1,0 +1,60 @@
+2020-10-22 21:07:54:	Main: Start programm
+2020-10-22 21:07:54:	Main: Call func showStartInfo
+2020-10-22 21:07:54:	Main: call createUsers
+2020-10-22 21:07:54:	Main: createUsers succesfully ended
+2020-10-22 21:07:56:	Menu: get login from keyboard: admin
+2020-10-22 21:07:58:	Menu: get password from keyboard: admin
+2020-10-22 21:07:58:	Menu: login and password correct
+2020-10-22 21:07:58:	Main: call loadSettings
+2020-10-22 21:07:58:	Settings.txt (Не удается найти указанный файл)
+2020-10-22 21:07:58:	Main: loadSettings succesfully ended
+2020-10-22 21:07:58:	Main: call loadFromFile
+2020-10-22 21:07:58:	database.txt (Не удается найти указанный файл)
+2020-10-22 21:07:58:	Main: loadFormFile succefully ended
+2020-10-22 21:07:58:	Menu: start run
+2020-10-22 21:08:06:	Main: call saveSettings
+2020-10-22 21:08:06:	Main: saveSettings succesfully ended
+2020-10-22 21:08:06:	Menu: autotestMode changed to: true
+2020-10-22 21:08:25:	Menu: created new Waterfowl animal: 0
+2020-10-22 21:08:44:	Menu: created new Waterfowl animal: 1
+2020-10-22 21:09:05:	Menu: created new Waterfowl animal: 2
+2020-10-22 21:09:14:	Menu: created new AquariumAviary aviary: AquaBox
+2020-10-22 21:09:23:	Menu: Waterfowl animal with id 1 moved to AquaBox
+2020-10-22 21:09:42:	Menu: created new Waterfowl animal: 3
+2020-10-22 21:09:59:	Menu: created new MeshAviary aviary: MeshLoft
+2020-10-22 21:10:12:	Menu: created new MeshAviary aviary: SuperMesh
+2020-10-22 21:10:28:	Menu: created new Waterfowl animal: 4
+2020-10-22 21:10:45:	Menu: created new Waterfowl animal: 5
+2020-10-22 21:10:57:	Menu: Feathered animal not moved!
+2020-10-22 21:10:57:	Index 5 out of bounds for length 3
+2020-10-22 21:11:10:	Menu: Feathered animal with id 5 moved to MeshLoft
+2020-10-22 21:11:22:	Menu: Feathered animal with id 3 moved to SuperMesh
+2020-10-22 21:11:27:	Main: call saveToFile
+2020-10-22 21:11:27:	Main: saveToFile succefully ended
+2020-10-22 21:11:46:	Menu: created new Waterfowl animal: 6
+2020-10-22 21:12:05:	Menu: created new Waterfowl animal: 7
+2020-10-22 21:12:35:	Menu: created new InfraredLightedAviary aviary: SafaryLight
+2020-10-22 21:12:56:	Menu: created new Waterfowl animal: 8
+2020-10-22 21:13:07:	Menu: ColdBlooded animal not moved!
+2020-10-22 21:13:07:	Index 8 out of bounds for length 2
+2020-10-22 21:13:21:	Menu: ColdBlooded animal with id 8 moved to SafaryLight
+2020-10-22 21:13:31:	Main: call saveToFile
+2020-10-22 21:13:31:	Main: saveToFile succefully ended
+2020-10-22 21:13:33:	Menu: exit
+2020-10-22 21:13:35:	Main: Start programm
+2020-10-22 21:13:35:	Main: Call func showStartInfo
+2020-10-22 21:13:35:	Main: call createUsers
+2020-10-22 21:13:35:	Main: createUsers succesfully ended
+2020-10-22 21:13:41:	Menu: get login from keyboard: user
+2020-10-22 21:13:42:	Menu: get password from keyboard: user
+2020-10-22 21:13:42:	Menu: login and password correct
+2020-10-22 21:13:42:	Main: call loadSettings
+2020-10-22 21:13:42:	Main: loadSettings succesfully ended
+2020-10-22 21:13:42:	Main: Autotest
+2020-10-22 21:13:42:	Main: call loadFromFile
+2020-10-22 21:13:43:	Main: loadFormFile succefully ended
+2020-10-22 21:13:43:	Menu: start run
+2020-10-22 21:14:07:	Menu: created new Waterfowl animal: 9
+2020-10-22 21:14:15:	Main: call saveToFile
+2020-10-22 21:14:15:	Main: saveToFile succefully ended
+2020-10-22 21:14:21:	Menu: exit

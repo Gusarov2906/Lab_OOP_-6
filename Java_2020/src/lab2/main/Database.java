@@ -1,9 +1,5 @@
 package lab2.main;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.ObjectInputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -16,12 +12,24 @@ import lab2.aviaries.InfraredLightedAviary;
 import lab2.aviaries.MeshAviary;
 import lab2.aviaries.OpenAirAviary;
 
+/**
+ * Class Database is class for storage arrayLists of different types of animal.
+ * @author gusarov2906
+ * 
+ */
+
 public class Database implements Serializable {
 		
+		private static final long serialVersionUID = 1L;
 		public ArrayList<AquariumAviary> arrayAquariumAviary;
 		public ArrayList<OpenAirAviary> arrayOpenAirAviary;
 		public ArrayList<MeshAviary> arrayMeshAviary;
 		public ArrayList<InfraredLightedAviary> arrayInfraredLightedAviary;
+		public int maxId = 0;
+		
+		/**
+		 * Default constructor.
+		 */
 		
 		public Database()
 		{
@@ -30,6 +38,10 @@ public class Database implements Serializable {
 			arrayMeshAviary = new ArrayList<MeshAviary>();
 			arrayInfraredLightedAviary = new ArrayList<InfraredLightedAviary>();
 		}
+		
+		/**
+		 * createDefAviaries - function to fill database with default aviaries.
+		 */
 		
 		public void createDefAviaries()
 		{

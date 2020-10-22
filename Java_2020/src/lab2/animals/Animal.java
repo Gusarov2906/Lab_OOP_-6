@@ -14,20 +14,12 @@ public abstract class Animal implements Serializable{
 	
 	//Fields
 	
-	/**
-	 * name - name of animal.
-	 * type - type of animal.
-	 * weight - weight of animal.
-	 * age - age of animal.
-	 * id - integer number max current id.
-	 * aviary - aviary where animal live.
-	 */
-	
+	private static final long serialVersionUID = 1L;
 	protected String name;
 	protected String type;
 	protected float weight;
 	protected int age;
-	protected static int id;
+	public static int id;
 	Aviary aviary;
 	
 	// Methods: usual
@@ -133,6 +125,16 @@ public abstract class Animal implements Serializable{
 	public int getAge()
 	{
 		return age;
+	}
+	
+	/**
+	 * getId - getter for filed "id".
+	 * @return - returns field "id".
+	 */
+	
+	public int getId()
+	{
+		return id;
 	}
 	
 	

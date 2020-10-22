@@ -16,6 +16,10 @@ public class Feathered extends Animal implements Serializable{
 	// Fields
 	
 	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
 	 * id - integer number to identify animal.
 	 * aviary - current aviary.
 	 * defOpenAirAviary - default aviary.
@@ -96,6 +100,18 @@ public class Feathered extends Animal implements Serializable{
 		this.aviary = newAviary;
 		newAviary.add(this);
 		
+	}
+	
+	/**
+	 * remove - function to remove from aviary.
+	 */
+	
+	public void remove()
+	{
+		if (this.aviary != null && this.aviary.getArray() != null)
+		{
+		this.aviary.remove(id);
+		}	
 	}
 	
 	/**

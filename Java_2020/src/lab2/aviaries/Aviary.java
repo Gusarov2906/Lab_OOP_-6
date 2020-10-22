@@ -17,6 +17,10 @@ public class Aviary  implements Serializable {
 	//Fields
 	
 	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
 	 * name - name of aviary in ZOO.
 	 * array - arrays of animals which existed in ZOO in this aviary.
 	 */
@@ -84,7 +88,7 @@ public class Aviary  implements Serializable {
 	
 	/**
 	 * setName - setter for field "name".
-	 * @param newAge - new name for aviary.
+	 * @param newName - new name for aviary.
 	 */
 	
 	public void setName(String newName)

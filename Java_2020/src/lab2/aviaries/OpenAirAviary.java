@@ -16,6 +16,10 @@ public class OpenAirAviary extends Aviary implements Serializable {
 	//Fields
 	
 	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
 	 * defaultNumber - static integer variable with numbering default aviaries
 	 */
 	
@@ -71,7 +75,6 @@ public class OpenAirAviary extends Aviary implements Serializable {
 	{
 		super.view();
 		System.out.println("Type: OpenAirAviary");
-		System.out.println("Count animals: " + this.count());
 		System.out.println("Animals:");
 		for (int i = 0; i < array.size(); i++)
 		{

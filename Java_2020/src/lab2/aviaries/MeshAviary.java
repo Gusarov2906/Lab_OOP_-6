@@ -12,6 +12,11 @@ import lab2.animals.Feathered;
 
 public class MeshAviary extends Aviary implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	//Fields
 	/**
 	 * defaultNumber - static integer variable with numbering default aviaries.
@@ -70,7 +75,6 @@ public class MeshAviary extends Aviary implements Serializable {
 	{
 		super.view();
 		System.out.println("Type: MeshAviary");
-		System.out.println("Count animals: " + this.count());
 		System.out.println("Animals:");
 		for (int i = 0; i < array.size(); i++)
 		{
