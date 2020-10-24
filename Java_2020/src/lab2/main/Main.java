@@ -57,6 +57,7 @@ public class Main {
             BufferedReader read = new BufferedReader(reader);
             debugMode = Boolean.parseBoolean(read.readLine());
             autotestsMode = Boolean.parseBoolean(read.readLine());
+            read.close();
         } 
         catch (Exception e) 
         {
@@ -76,6 +77,7 @@ public class Main {
             writer.write(debugMode + "\n");
             writer.write(autotestsMode + "\n");
             writer.flush();
+            writer.close();
         } catch (Exception e) {
         	logsWrite(e.getMessage());
             System.out.println("Exception: " + e.getMessage());

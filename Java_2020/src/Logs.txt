@@ -58,3 +58,45 @@
 2020-10-22 21:14:15:	Main: call saveToFile
 2020-10-22 21:14:15:	Main: saveToFile succefully ended
 2020-10-22 21:14:21:	Menu: exit
+2020-10-24 10:19:45:	Main: Start programm
+2020-10-24 10:19:45:	Main: Call func showStartInfo
+2020-10-24 10:19:45:	Main: call createUsers
+2020-10-24 10:19:45:	Main: createUsers succesfully ended
+2020-10-24 10:19:48:	Menu: get login from keyboard: admin
+2020-10-24 10:19:49:	Menu: get password from keyboard: admin
+2020-10-24 10:19:49:	Menu: login and password correct
+2020-10-24 10:19:49:	Main: call loadSettings
+2020-10-24 10:19:49:	Main: loadSettings succesfully ended
+2020-10-24 10:19:49:	Main: Autotest: start
+2020-10-24 10:19:49:	Main: Autotest: created Waterfowl animal named Petr
+2020-10-24 10:19:49:	Main: Autotest: created Waterfowl animal named Vasia
+2020-10-24 10:19:49:	Main: Autotest: created AquariumAviary SwimmingPool
+2020-10-24 10:19:49:	Main: Autotest: moved Petr to SwimmingPool
+2020-10-24 10:19:49:	Main: Autotest: removed Vasia from default aviary
+2020-10-24 10:19:49:	Main: Autotest: removed Petr from default aviary
+2020-10-24 10:19:49:	Main: Autotest: finish
+2020-10-24 10:19:49:	Main: call loadFromFile
+2020-10-24 10:19:49:	Main: loadFormFile succefully ended
+2020-10-24 10:19:49:	Menu: start run
+2020-10-24 10:20:03:	Menu: exit
+2020-10-24 11:47:05:	Main: Start programm
+2020-10-24 11:47:05:	Main: Call func showStartInfo
+2020-10-24 11:47:05:	Main: call createUsers
+2020-10-24 11:47:05:	Main: createUsers succesfully ended
+2020-10-24 11:47:08:	Menu: get login from keyboard: admin
+2020-10-24 11:47:10:	Menu: get password from keyboard: admin
+2020-10-24 11:47:10:	Menu: login and password correct
+2020-10-24 11:47:10:	Main: call loadSettings
+2020-10-24 11:47:10:	Main: loadSettings succesfully ended
+2020-10-24 11:47:10:	Main: Autotest: start
+2020-10-24 11:47:10:	Main: Autotest: created Waterfowl animal named Petr
+2020-10-24 11:47:10:	Main: Autotest: created Waterfowl animal named Vasia
+2020-10-24 11:47:10:	Main: Autotest: created AquariumAviary SwimmingPool
+2020-10-24 11:47:10:	Main: Autotest: moved Petr to SwimmingPool
+2020-10-24 11:47:10:	Main: Autotest: removed Vasia from default aviary
+2020-10-24 11:47:10:	Main: Autotest: removed Petr from default aviary
+2020-10-24 11:47:10:	Main: Autotest: finish
+2020-10-24 11:47:10:	Main: call loadFromFile
+2020-10-24 11:47:10:	Main: loadFormFile succefully ended
+2020-10-24 11:47:10:	Menu: start run
+2020-10-24 11:47:35:	Menu: exit
