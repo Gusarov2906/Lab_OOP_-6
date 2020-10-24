@@ -51,7 +51,7 @@ public class Main {
 	 */
 	
 	public static void loadSettings() {
-		logsWrite("Main: call loadSettings");
+		//logsWrite("Main: call loadSettings");
         try (FileReader reader = new FileReader("Settings.txt")) 
         {
             BufferedReader read = new BufferedReader(reader);
@@ -64,7 +64,7 @@ public class Main {
         	logsWrite(e.getMessage());
             System.out.println("Exception: " + e.getMessage());
         }
-        logsWrite("Main: loadSettings succesfully ended");
+        //logsWrite("Main: loadSettings succesfully ended");
     }
 
 	/**
@@ -237,6 +237,8 @@ public class Main {
 	
 	public static void main(String[] args)
 	{
+		loadSettings();
+		
 		logsWrite("Main: Start programm");
 		Menu menu = new Menu();
 		User currentUser;
@@ -250,7 +252,6 @@ public class Main {
 		Database db = new Database();
 		db.createDefAviaries();
 		
-		loadSettings();
 		if (autotestsMode)
 		{
 			autotest1(db, menu);
