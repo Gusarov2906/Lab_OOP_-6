@@ -12,8 +12,6 @@ import java.io.ObjectOutputStream;
 import java.util.HashMap;
 
 import lab2.animals.Animal;
-import lab2.animals.Waterfowl;
-import lab2.aviaries.AquariumAviary;
 
 /**
 *
@@ -165,55 +163,8 @@ public class Main {
 		if (debugMode) Logger.write(str);
 	}
 	
-	/**
-	 * autotest1 - first autotest to check efficiency.
-	 * @param db - current database.
-	 * @param menu - menu to get from it default aviary.
-	 */
 	
-	public static void autotest1(Database db, Menu menu)
-	{
-		Logger.write("Main: Autotest: start");
-		System.out.println("Autotest1:");
-		System.out.println();
-		Waterfowl fish1 = new Waterfowl("Petr", "Fish", 1.23f, 1);
-		System.out.println("\n#Created Petr\n");
-		Logger.write("Main: Autotest: created Waterfowl animal named Petr");
-		db.arrayAquariumAviary.get(0).view();
-		Waterfowl fish2 = new Waterfowl("Vasia", "Fish", 2.67f, 2);
-		System.out.println("\n#Created Vasia\n");
-		Logger.write("Main: Autotest: created Waterfowl animal named Vasia");
-		db.arrayAquariumAviary.get(0).view();
-		System.out.println();
-		AquariumAviary aviary1 = new AquariumAviary("SwimmingPool");
-		System.out.println("#Created SwimmingPool\n");
-		Logger.write("Main: Autotest: created AquariumAviary SwimmingPool");
-		db.arrayAquariumAviary.get(0).view();
-		aviary1.view();
-		System.out.println();
-		fish1.move(aviary1);
-		System.out.println("\n#Moved Petr to SwimmingPool\n");
-		Logger.write("Main: Autotest: moved Petr to SwimmingPool");
-		db.arrayAquariumAviary.get(0).view();
-		System.out.println();
-		aviary1.view();
-		System.out.println();
-		fish2.remove();
-		System.out.println("\n#Removed Vasia from default aviary\n");
-		Logger.write("Main: Autotest: removed Vasia from default aviary");
-		db.arrayAquariumAviary.get(0).view();
-		System.out.println();
-		aviary1.view();
-		fish1.remove();
-		System.out.println("\n#Removed Petr from SwimmingPool\n");
-		Logger.write("Main: Autotest: removed Petr from default aviary");
-		db.arrayAquariumAviary.get(0).view();
-		System.out.println();
-		aviary1.view();
-		System.out.println();
-		System.out.println();
-		Logger.write("Main: Autotest: finish");
-	}
+	
 	
 	/**
 	 * Method 'show_start_info' show info about work and author in console.
@@ -238,7 +189,6 @@ public class Main {
 	public static void main(String[] args)
 	{
 		loadSettings();
-		
 		logsWrite("Main: Start programm");
 		Menu menu = new Menu();
 		User currentUser;
@@ -254,7 +204,8 @@ public class Main {
 		
 		if (autotestsMode)
 		{
-			autotest1(db, menu);
+			Autotests.autotest2();
+			//Autotests.autotest1(db);
 		}
 
 		db = loadFromFile("database.txt", db);

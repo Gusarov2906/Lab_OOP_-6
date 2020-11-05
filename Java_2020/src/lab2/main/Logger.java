@@ -12,7 +12,7 @@ import java.time.format.DateTimeFormatter;
  */
 
 public class Logger {
-	  private static String fileName = "Logs.txt";
+	    private static String fileName = "Logs.txt";
 
 	   /**
 	    * write - function to write message to log file.
@@ -32,4 +32,38 @@ public class Logger {
 	            System.out.println("Exception: " + e.getMessage());
 	        }
 	    }
+	    
+	    public static void write(Exception error) {
+	        try 
+	        {
+	            FileWriter writer = new FileWriter(fileName, true);
+	            writer.write(LocalDate.now() + " " + LocalTime.now().format(DateTimeFormatter.ofPattern("H:mm:ss")) + ":\t" + error.getMessage() + "\n");
+	            writer.flush();
+	            writer.close();
+	        }
+	        catch (Exception e) 
+	        {
+	            System.out.println("Exception: " + e.getMessage());
+	        }
+	    }
+	    
+	    public static void writeToLab4Log(String message) {
+	        try 
+	        {
+	            FileWriter writer = new FileWriter(fileName, true);
+	            writer.write(LocalDate.now() + " " + LocalTime.now().format(DateTimeFormatter.ofPattern("H:mm:ss")) + ":\t" + message + "\n");
+	            writer.flush();
+	            writer.close();
+	            writer = new FileWriter("lab4log.txt", true);
+	            writer.write(LocalDate.now() + " " + LocalTime.now().format(DateTimeFormatter.ofPattern("H:mm:ss")) + ":\t" + message + "\n");
+	            writer.flush();
+	            writer.close();
+	        }
+	        catch (Exception e) 
+	        {
+	            System.out.println("Exception: " + e.getMessage());
+	        }
+	    }
+	    
+
 }

@@ -3,6 +3,7 @@ package lab2.animals;
 import java.io.Serializable;
 
 import lab2.aviaries.AquariumAviary;
+import lab2.random.Generator;
 
 /**
  * 
@@ -36,10 +37,10 @@ public class Waterfowl extends Animal implements Serializable {
 	
 	public Waterfowl()
 	{
-		this.name = "NotDifined";
-		this.type ="NotDifined";
-		this.weight = 0;
-		this.age = 0;
+		this.name = Generator.randomName();
+		this.type = Generator.randomType();
+		this.weight = (float)Generator.randomWeight();
+		this.age = Generator.randomAge();
 		this.id = Animal.id;
 		Animal.id +=1;
 		this.move(defAquariumAviary);
