@@ -70,27 +70,39 @@ public final class Menu {
 	 */
 	
 	public int readPosInt(Scanner scanner) {
+		int num = -1;
+		while(num < 0)
+		{
 		  try {
-			int num = scanner.nextInt();
+			num = scanner.nextInt();
 			if (num < 0)
 			{
 				throw new NegIntException("Number shouldn't be less then null!");
 			}
-		    return num;
 		  }
 		  catch (java.util.InputMismatchException e) {
 		    String token = scanner.next();
-		    System.out.println("Exception: not int was readen - " + token + " !");
-		    return 0;
+		    System.out.println("EXCEPTION: not int was readen - " + token + " !");
+		    Logger.write("EXCEPTION: not int was readen - " + token + " !");
+			System.out.print("Write cmd again: ");
+		    Logger.addError(e);
+		    num = -1;
 		  }
 		  catch (java.util.NoSuchElementException e) {
-			System.out.println("Exception: no int nums ! ");
-		    return 0;
+			System.out.println("EXCEPTION: no int nums ! ");
+			Logger.write("EXCEPTION: no int nums ! ");
+			Logger.addError(e);
+			num = -1;
 		  }
 		  catch (NegIntException e) {
-				System.out.println("Exception: " + e.getMessage());
-			    return 0;
-			  }
+			System.out.println("EXCEPTION: negative int was readen - " + num + " !");
+			Logger.write("EXCEPTION: negative int was readen - " + num + " !");
+			System.out.print("Write cmd again: ");
+			Logger.addError(e);
+			num = -1;
+		  }
+		}
+	    return num;
 	}
 	
 	/**
@@ -103,20 +115,28 @@ public final class Menu {
 	public int readCmd(Scanner scanner, int maxNumCmd)
 	{
 		int cmd = -1;
+		while (cmd == -1)
+		{
 		try {
 		cmd = readPosInt(scanner);
 		if (cmd > maxNumCmd)
 		{
-			throw new MaxIntException("Number shouldn't be begger then " + maxNumCmd + " !");
+			MaxIntException e = new MaxIntException("Number shouldn't be begger then " + maxNumCmd + " !");
+			throw e;
 		}
 		}
 		catch (MaxIntException e) {
 			System.out.println("Exception: " + e.getMessage());
-		    return 0;
+			System.out.print("Write cmd again: ");
+			Logger.addError(e);
+		    cmd = -1;
 		}
 		catch (Exception e) {
 			System.out.println("Exception: " + e.getMessage());
-		    return 0;
+			System.out.print("Write cmd again: ");
+			Logger.addError(e);
+			cmd = -1;
+		}
 		}
 		return cmd;
 	}
@@ -190,7 +210,7 @@ public final class Menu {
 		}
 		catch (Exception e)
 		{
-			
+			Logger.addError(e);
 		}
 	}  
 	
@@ -392,7 +412,7 @@ public final class Menu {
 					{
 						System.out.println("Exception: " + e.getMessage());
 						Main.logsWrite("Menu: Waterfowl animal not moved!");
-						Main.logsWrite(e.getMessage());
+						Logger.addError(e);
 					}
 					
 					break;
@@ -408,7 +428,7 @@ public final class Menu {
 					{
 						System.out.println("Exception: " + e.getMessage());
 						Main.logsWrite("Menu: Ungulates animal not moved!");
-						Main.logsWrite(e.getMessage());
+						Logger.addError(e);
 					}
 					break;
 				case 3:
@@ -423,7 +443,7 @@ public final class Menu {
 					{
 						System.out.println("Exception: " + e.getMessage());
 						Main.logsWrite("Menu: Feathered animal not moved!");
-						Main.logsWrite(e.getMessage());
+						Logger.addError(e);
 					}
 					break;
 				case 4:
@@ -438,7 +458,7 @@ public final class Menu {
 					{
 						System.out.println("Exception: " + e.getMessage());
 						Main.logsWrite("Menu: ColdBlooded animal not moved!");
-						Main.logsWrite(e.getMessage());
+						Logger.addError(e);
 					}
 					break;
 				default:

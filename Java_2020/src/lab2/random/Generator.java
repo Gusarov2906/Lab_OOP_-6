@@ -1,7 +1,16 @@
 package lab2.random;
 import java.util.Random;
+/**
+ * Class with methods to fill fields with random values.
+ * @author gusarov2906
+ *
+ */
 public class Generator {
-
+	
+	/**
+	 * names - array with names.
+	 */
+	
 	private static final String[] names = {
 			"Delmar",
 			"Irvin",
@@ -104,7 +113,10 @@ public class Generator {
 			"Francisca",
 			"Eleni"
 	};
-
+	
+	/**
+	 * types - array with types of waterfowl animals.
+	 */
 	private static final String[] types= {
 			"Crab",
 			"Fish",
@@ -165,30 +177,61 @@ public class Generator {
 		};
 	private static final Random random = new Random();
 	
+	/**
+	 * randomName - function to get random name.
+	 * @return name - string name.
+	 */
+	
 	public static String randomName()
 	{
 		return names[random.nextInt(names.length)];
 	}
+	
+	/**
+	 * randomType - function to get random type of waterfowl animal.
+	 * @return type - type of waterfowl animal.
+	 */
 	
 	public static String randomType()
 	{
 		return types[random.nextInt(types.length)];
 	}
 	
+	/**
+	 * randomInt - function to get random int.
+	 * @return - random int less 100000000.
+	 */
+	
 	public static int randomInt()
 	{
 		return random.nextInt(100000000);
 	}
+	
+	/**
+	 * randomInt - function to get random int.
+	 * @param size - max size of random int.
+	 * @return - random int less param.
+	 */
 	
 	public static int randomInt(int size)
 	{
 		return random.nextInt(size);
 	}
 	
+	/**
+	 * randomAge - function to get random age.
+	 * @return - age (less 10)
+	 */
+	
 	public static int randomAge()
 	{
 		return random.nextInt(10);
 	}
+	
+	/**
+	 * randomWeight - function to get random weight.
+	 * @return - weight (less 10)
+	 */
 	
 	public static double randomWeight()
 	{

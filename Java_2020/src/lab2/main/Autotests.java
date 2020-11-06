@@ -1,7 +1,6 @@
 package lab2.main;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.LinkedList;
 
 import lab2.animals.Waterfowl;
@@ -13,7 +12,6 @@ public class Autotests {
 	/**
 	 * autotest1 - first autotest to check efficiency.
 	 * @param db - current database.
-	 * @param menu - menu to get from it default aviary.
 	 */
 	
 	public static void autotest1(Database db)
@@ -60,6 +58,12 @@ public class Autotests {
 		Logger.write("Main: Autotest: finish");
 	}
 	
+	/**
+	 * 
+	 * runTestWithArrayList - function with some tests for ArrayList.
+	 * @param size - size of list.
+	 */
+	
 	public static void runTestWithArrayList(int size)
 	{
 		System.out.println("\nArrayList n = " + size + "\n");
@@ -103,6 +107,12 @@ public class Autotests {
 		System.out.println("removeMedianTime = " + totalTime/count);
 	}
 	
+	/**
+	 * 
+	 * runTestWithLinkedList - function with some tests for LinkedList.
+	 * @param size - size of list.
+	 */
+	
 	public static void runTestWithLinkedList(int size)
 	{
 		System.out.println("Linked list n = " + size + "\n");
@@ -145,6 +155,10 @@ public class Autotests {
 		System.out.println("removeTotalTime = " + totalTime);
 		System.out.println("removeMedianTime = " + totalTime/count);
 	}
+	
+	/**
+	 * autotest2 - second autotest to check difference between LinkedList and ArrayList.
+	 */
 	
 	public static void autotest2()
 	{

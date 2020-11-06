@@ -59,7 +59,7 @@ public class Main {
         } 
         catch (Exception e) 
         {
-        	logsWrite(e.getMessage());
+			Logger.addError(e);
             System.out.println("Exception: " + e.getMessage());
         }
         //logsWrite("Main: loadSettings succesfully ended");
@@ -77,7 +77,7 @@ public class Main {
             writer.flush();
             writer.close();
         } catch (Exception e) {
-        	logsWrite(e.getMessage());
+			Logger.addError(e);
             System.out.println("Exception: " + e.getMessage());
         }
         logsWrite("Main: saveSettings succesfully ended");
@@ -104,17 +104,17 @@ public class Main {
 		 } 
 		 catch (FileNotFoundException e) 
 		 {
-			logsWrite(e.getMessage());
+			Logger.addError(e);
 			System.out.println("Exception: " + e.getMessage());
 		 }
 		 catch (IOException e) 
 		 {
-			logsWrite(e.getMessage());
+			Logger.addError(e);
 			System.out.println("Exception: " + e.getMessage());
 		 } 
 		 catch (ClassNotFoundException e) 
 		 {
-			logsWrite(e.getMessage());
+			Logger.addError(e);
 			System.out.println("Exception: " + e.getMessage());
 		 }
 		 logsWrite("Main: loadFormFile succefully ended");
@@ -141,12 +141,12 @@ public class Main {
 		} 
 		catch (FileNotFoundException e) 
 		{
-			logsWrite(e.getMessage());
+			Logger.addError(e);
 			System.out.println("Exception: " + e.getMessage());
 		} 
 		catch (IOException e) 
 		{
-			logsWrite(e.getMessage());
+			Logger.addError(e);
 			System.out.println("Exception: " + e.getMessage());
 		}
 		logsWrite("Main: saveToFile succefully ended");
@@ -210,14 +210,11 @@ public class Main {
 
 		db = loadFromFile("database.txt", db);
 		
-		try {
+
 		db = menu.run(db, currentUser.getGroup());
+		Logger.finish();
 		//saveToFile("database.txt", db);
-		}
-		catch (Exception e)
-		{
-			System.out.println("Exception: " + e.getMessage());
-		}
+
 		
 		
 	}

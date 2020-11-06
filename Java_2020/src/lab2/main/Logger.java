@@ -4,6 +4,7 @@ import java.io.FileWriter;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 
 /**
  * Logger - class realize logger, which write debug information to file.
@@ -13,12 +14,14 @@ import java.time.format.DateTimeFormatter;
 
 public class Logger {
 	    private static String fileName = "Logs.txt";
-
+	    private static ArrayList <Exception> errorList = new ArrayList <Exception>();
+	    private static int numErrors = 0;
+	    
 	   /**
 	    * write - function to write message to log file.
 	    * @param message - string message.
 	    */
-	  
+	    
 	    public static void write(String message) {
 	        try 
 	        {
@@ -33,11 +36,16 @@ public class Logger {
 	        }
 	    }
 	    
+	   /**
+	    * write - function to write error to log file.
+	    * @param error - Exception.
+	    */
+	    
 	    public static void write(Exception error) {
 	        try 
 	        {
 	            FileWriter writer = new FileWriter(fileName, true);
-	            writer.write(LocalDate.now() + " " + LocalTime.now().format(DateTimeFormatter.ofPattern("H:mm:ss")) + ":\t" + error.getMessage() + "\n");
+	            writer.write(LocalDate.now() + " " + LocalTime.now().format(DateTimeFormatter.ofPattern("H:mm:ss")) + ":\t" + "EXCEPTION: " + error.getMessage() + "\n");
 	            writer.flush();
 	            writer.close();
 	        }
@@ -46,6 +54,22 @@ public class Logger {
 	            System.out.println("Exception: " + e.getMessage());
 	        }
 	    }
+	    
+	    /**
+	     * writeToLogAndConsole - function to write to console and to log.
+	     * @param message - string message.
+	     */
+	    
+	    public static void writeToLogAndConsole(String message)
+	    {
+	    	write(message);
+	    	System.out.println(message);
+	    }
+	    
+	    /**
+	     * writeToLab4Log - function to write log for autotest2.
+	     * @param message - string message.
+	     */
 	    
 	    public static void writeToLab4Log(String message) {
 	        try 
@@ -65,5 +89,38 @@ public class Logger {
 	        }
 	    }
 	    
+	    /**
+	     * addError - function to save error in Logger.
+	     * @param e - Exception.
+	     */
+	    
+	    public static void addError(Exception e)
+	    {
+	    	 write(e);
+	    	 numErrors++;
+	    	 errorList.add(e);
+	    }
+	    
+	    /**
+	     * finish - final function, write about work program. If there were exceptions, show it. 
+	     */
+	    
+	    public static void finish()
+	    {
+	    	if (Main.debugMode) {
+	    	if (errorList.isEmpty())
+	    	{
+	    		writeToLogAndConsole("\n\nProgram finished without errors.");
+	    	}
+	    	else
+	    	{
+	    		writeToLogAndConsole("\n\nProgram finished with errors:");
+	    		for (int i = 0; i < numErrors; i++)
+	    		{
+	    			writeToLogAndConsole(errorList.get(i).getMessage());
+	    		}
+	    	}
+	    	}
+	    }
 
 }
