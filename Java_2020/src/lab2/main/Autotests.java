@@ -93,10 +93,11 @@ public class Autotests {
 		int count = arrList.size() / 10;
 		for (int i = 0; i < count; i++)
 		{
+			int tmpId = Generator.randomInt(arrList.size());
 			oneOperationTime = System.nanoTime();
-			arrList.remove(Generator.randomInt(arrList.size()));
+			arrList.remove(tmpId);
 			oneOperationTime = System.nanoTime() - oneOperationTime;
-			Logger.writeToLab4Log("remove, ID = " + i + ", " + oneOperationTime);
+			Logger.writeToLab4Log("remove, ID = " + tmpId + ", " + oneOperationTime);
 			totalTime += oneOperationTime;
 		}
 		Logger.writeToLab4Log("removeTotalCount = " + count);
@@ -115,7 +116,7 @@ public class Autotests {
 	
 	public static void runTestWithLinkedList(int size)
 	{
-		System.out.println("Linked list n = " + size + "\n");
+		System.out.println("\nLinked list n = " + size + "\n");
 		Logger.writeToLab4Log("LINKEDLIST n = " + size);
 		long oneOperationTime;
 		long totalTime = 0;
@@ -142,10 +143,11 @@ public class Autotests {
 		int count = linkList.size() / 10;
 		for (int i = 0; i < count; i++)
 		{
+			int tmpId = Generator.randomInt(linkList.size());
 			oneOperationTime = System.nanoTime();
-			linkList.remove(Generator.randomInt(linkList.size()));
+			linkList.remove(tmpId);
 			oneOperationTime = System.nanoTime() - oneOperationTime;
-			Logger.writeToLab4Log("remove, ID = " + i + ", " + oneOperationTime);
+			Logger.writeToLab4Log("remove, ID = " + tmpId + ", " + oneOperationTime);
 			totalTime += oneOperationTime;
 		}
 		Logger.writeToLab4Log("removeTotalCount = " + count);

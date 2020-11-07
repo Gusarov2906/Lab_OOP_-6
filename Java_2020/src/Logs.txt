@@ -1,4 +1,14 @@
-2020-11-06 21:46:15:	EXCEPTION: not int was readen - dad !
-2020-11-06 21:46:15:	EXCEPTION: null
-2020-11-06 21:46:15:	EXCEPTION: not int was readen - adw !
-2020-11-06 21:46:15:	EXCEPTION: null
+2020-11-07 19:50:45:	Main: Start programm
+2020-11-07 19:50:45:	Main: Call func showStartInfo
+2020-11-07 19:50:45:	Main: call createUsers
+2020-11-07 19:50:45:	Main: createUsers succesfully ended
+2020-11-07 19:50:47:	Menu: get login from keyboard: admin
+2020-11-07 19:50:48:	Menu: get password from keyboard: admin
+2020-11-07 19:50:48:	Menu: login and password correct
+2020-11-07 19:51:18:	Main: call loadFromFile
+2020-11-07 19:51:18:	Main: loadFormFile succefully ended
+2020-11-07 19:51:18:	Menu: start run
+2020-11-07 19:51:47:	Menu: exit
+2020-11-07 19:51:47:	
+
+Program finished without errors.
