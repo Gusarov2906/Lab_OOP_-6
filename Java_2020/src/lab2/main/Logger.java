@@ -1,5 +1,6 @@
 package lab2.main;
 
+import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -76,6 +77,40 @@ public class Logger {
 	        {
 	        	FileWriter writer = new FileWriter("lab4log.txt", true);
 	            writer.write(LocalDate.now() + " " + LocalTime.now().format(DateTimeFormatter.ofPattern("H:mm:ss")) + ":\t" + message + "\n");
+	            writer.flush();
+	            writer.close();
+	        }
+	        catch (Exception e) 
+	        {
+	            System.out.println("Exception: " + e.getMessage());
+	        }
+	    }
+	    
+	    public static void clear(String filename)
+	    {
+	    	try 
+	    	{
+	            FileWriter fstream1 = new FileWriter(filename);
+	            BufferedWriter out1 = new BufferedWriter(fstream1); 
+	            out1.write("");
+	            out1.close();
+	        }
+	    	catch (Exception e) 
+	        {
+	           System.err.println("Error in file cleaning: " + e.getMessage());
+	        }
+	    }
+	    
+	    /**
+	     * writeToLab5Log - function to write log for autotest2.
+	     * @param message - string message.
+	     */
+	    
+	    public static void writeToLab5Log(String message) {
+	        try 
+	        {
+	        	FileWriter writer = new FileWriter("lab5log.txt", true);
+	            writer.write(message + "\n");
 	            writer.flush();
 	            writer.close();
 	        }

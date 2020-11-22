@@ -68,6 +68,7 @@ public class Autotests {
 	{
 		System.out.println("\nArrayList n = " + size + "\n");
 		Logger.writeToLab4Log("ARRAYLIST n = " + size);
+		Logger.writeToLab5Log("ARRAYLIST n = " + size);
 		long oneOperationTime;
 		long totalTime = 0;
 		ArrayList<AquariumAviary> arrList = new ArrayList<AquariumAviary>();
@@ -85,6 +86,9 @@ public class Autotests {
 		Logger.writeToLab4Log("addTotalCount = " + size);
 		Logger.writeToLab4Log("addTotalTime = " + totalTime);
 		Logger.writeToLab4Log("addMedianTime = " + totalTime/size);
+		Logger.writeToLab5Log("" + size);
+		Logger.writeToLab5Log("" + totalTime);
+		Logger.writeToLab5Log("" + totalTime/size);
 		System.out.println("addTotalCount = " + size);
 		System.out.println("addTotalTime = " + totalTime);
 		System.out.println("addMedianTime = " + totalTime/size);
@@ -103,6 +107,9 @@ public class Autotests {
 		Logger.writeToLab4Log("removeTotalCount = " + count);
 		Logger.writeToLab4Log("removeTotalTime = " + totalTime);
 		Logger.writeToLab4Log("removeMedianTime = " + totalTime/count);
+		Logger.writeToLab5Log("" + count);
+		Logger.writeToLab5Log("" + totalTime);
+		Logger.writeToLab5Log("" + totalTime/count);
 		System.out.println("removeTotalCount = " + count);
 		System.out.println("removeTotalTime = " + totalTime);
 		System.out.println("removeMedianTime = " + totalTime/count);
@@ -118,6 +125,7 @@ public class Autotests {
 	{
 		System.out.println("\nLinked list n = " + size + "\n");
 		Logger.writeToLab4Log("LINKEDLIST n = " + size);
+		Logger.writeToLab5Log("LINKEDLIST n = " + size);
 		long oneOperationTime;
 		long totalTime = 0;
 		LinkedList<AquariumAviary>linkList = new LinkedList<AquariumAviary>();
@@ -135,6 +143,9 @@ public class Autotests {
 		Logger.writeToLab4Log("addTotalCount = " + size);
 		Logger.writeToLab4Log("addTotalTime = " + totalTime);
 		Logger.writeToLab4Log("addMedianTime = " + totalTime/size);
+		Logger.writeToLab5Log("" + size);
+		Logger.writeToLab5Log("" + totalTime);
+		Logger.writeToLab5Log("" + totalTime/size);
 		System.out.println("addTotalCount = " + size);
 		System.out.println("addTotalTime = " + totalTime);
 		System.out.println("addMedianTime = " + totalTime/size);
@@ -153,6 +164,9 @@ public class Autotests {
 		Logger.writeToLab4Log("removeTotalCount = " + count);
 		Logger.writeToLab4Log("removeTotalTime = " + totalTime);
 		Logger.writeToLab4Log("removeMedianTime = " + totalTime/count);
+		Logger.writeToLab5Log("" + count);
+		Logger.writeToLab5Log("" + totalTime);
+		Logger.writeToLab5Log("" + totalTime/count);
 		System.out.println("removeTotalCount = " + count);
 		System.out.println("removeTotalTime = " + totalTime);
 		System.out.println("removeMedianTime = " + totalTime/count);

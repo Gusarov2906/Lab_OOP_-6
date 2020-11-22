@@ -13,6 +13,7 @@ import java.util.HashMap;
 
 import lab2.animals.Animal;
 
+
 /**
 *
 * @author Gusarov2906
@@ -30,6 +31,7 @@ public class Main {
 	public static boolean autotestsMode = false;
 	public static boolean debugMode = true;
 	public static HashMap<String, User> users = new HashMap<String, User>();
+	public static boolean exit = false;
 	
 	/**
 	 * createUsers - function to fill field users by these users.
@@ -173,7 +175,7 @@ public class Main {
 	public static void showStartInfo()
 	{
 		logsWrite("Main: Call func showStartInfo");
-		System.out.println("Lab:     Java Lab 2");
+		System.out.println("Lab:     Java Lab 5");
 		System.out.println("Author:  Gusarov Andrey");
 		System.out.println("Group:   PIN-34");
 		System.out.println("Variant: 6");
@@ -188,6 +190,9 @@ public class Main {
 	
 	public static void main(String[] args)
 	{
+		//GraphCreator.create(TypeOfGraph.AddMedianTime);
+
+		
 		loadSettings();
 		logsWrite("Main: Start programm");
 		Menu menu = new Menu();
@@ -204,6 +209,8 @@ public class Main {
 		
 		if (autotestsMode)
 		{
+			Logger.clear("lab4log.txt");
+			Logger.clear("lab5log.txt");
 			Autotests.autotest2();
 			//Autotests.autotest1(db);
 		}
@@ -213,6 +220,7 @@ public class Main {
 
 		db = menu.run(db, currentUser.getGroup());
 		Logger.finish();
+		
 		//saveToFile("database.txt", db);
 
 		

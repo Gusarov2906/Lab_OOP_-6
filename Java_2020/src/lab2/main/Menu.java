@@ -14,6 +14,8 @@ import lab2.aviaries.Aviary;
 import lab2.aviaries.InfraredLightedAviary;
 import lab2.aviaries.MeshAviary;
 import lab2.aviaries.OpenAirAviary;
+import lab2.graph.GraphCreator;
+import lab2.graph.TypeOfGraph;
 
 
 public final class Menu {
@@ -556,13 +558,51 @@ public final class Menu {
 				clearConsole();
 				System.out.println("Now autotestsMode is " + Main.autotestsMode );
 				System.out.println("1: Switch state");
+				System.out.println("2: Show graphics");
 				System.out.println("0: Back");
+				System.out.print("Your cmd: ");
 				cmd = readCmd(scanner,4);
 				if (cmd == 1)
 				{
 					Main.autotestsMode = !Main.autotestsMode;
 					Main.saveSettings();
 					Main.logsWrite("Menu: autotestMode changed to: " + Main.autotestsMode);
+				}
+				else if (cmd == 2)
+				{
+					clearConsole();
+					System.out.println("What type of graph you want to see?");
+					System.out.println("1: Add Total Time");
+					System.out.println("2: Add Median Time");
+					System.out.println("3: Remove Total Time");
+					System.out.println("4: Remove Median Time");
+					System.out.println("5: All");
+					System.out.println("0: Back");
+					System.out.print("Your cmd: ");
+					cmd = readCmd(scanner,5);
+					switch(cmd)
+					{
+					case 1:
+						GraphCreator.create(TypeOfGraph.AddTotalTime);
+						break;
+					case 2:
+						GraphCreator.create(TypeOfGraph.AddMedianTime);
+						break;
+					case 3:
+						GraphCreator.create(TypeOfGraph.RemoveTotalTime);
+						break;
+					case 4:
+						GraphCreator.create(TypeOfGraph.RemoveMedianTime);
+						break;
+					case 5:
+						GraphCreator.create(TypeOfGraph.AddTotalTime);
+						GraphCreator.create(TypeOfGraph.AddMedianTime);
+						GraphCreator.create(TypeOfGraph.RemoveTotalTime);
+						GraphCreator.create(TypeOfGraph.RemoveMedianTime);
+						break;
+					default:
+						break;
+					}
 				}
 				clearConsole();
 				break;
