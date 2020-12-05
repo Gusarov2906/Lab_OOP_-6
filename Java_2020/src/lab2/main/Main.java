@@ -11,7 +11,13 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.HashMap;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import lab2.animals.Animal;
+
+import javafx.application.Application;
 
 
 /**
@@ -26,12 +32,13 @@ import lab2.animals.Animal;
  *
  */
 
-public class Main {
+public class Main extends Application {
 	
 	public static boolean autotestsMode = false;
 	public static boolean debugMode = true;
 	public static HashMap<String, User> users = new HashMap<String, User>();
 	public static boolean exit = false;
+	public static Database db = new Database();
 	
 	/**
 	 * createUsers - function to fill field users by these users.
@@ -182,7 +189,16 @@ public class Main {
 		System.out.println("Num PC:  14");
 		System.out.println();
 	}
-	
+
+	@Override
+	public void start(Stage primaryStage) throws Exception{
+		Parent root = FXMLLoader.load(getClass().getResource("../app/MainWindow.fxml"));
+		primaryStage.setTitle("Hello World");
+		primaryStage.setScene(new Scene(root, 800, 600));
+		primaryStage.setResizable(false);
+		primaryStage.show();
+	}
+
 	/**
 	 * From 'main' program run.
 	 * @param args - There is no parameter handler from the console right now.
@@ -192,21 +208,20 @@ public class Main {
 	{
 		//GraphCreator.create(TypeOfGraph.AddMedianTime);
 
-		
 		loadSettings();
-		logsWrite("Main: Start programm");
+		logsWrite("Main: Start program");
 		Menu menu = new Menu();
 		User currentUser;
 		
-		menu.clearConsole();
-		Main.showStartInfo();
+		//menu.clearConsole();
+		//Main.showStartInfo();
 		
 		createUsers();
-		currentUser = menu.authorize(users);
+		//currentUser = menu.authorize(users);
 		
-		Database db = new Database();
+		db = new Database();
 		db.createDefAviaries();
-		
+		/*
 		if (autotestsMode)
 		{
 			Logger.clear("lab4log.txt");
@@ -214,16 +229,14 @@ public class Main {
 			Autotests.autotest2();
 			//Autotests.autotest1(db);
 		}
+		*/
+		//db = loadFromFile("database.txt", db);
 
-		db = loadFromFile("database.txt", db);
-		
+		launch(args);
 
-		db = menu.run(db, currentUser.getGroup());
+		//db = menu.run(db, currentUser.getGroup());
 		Logger.finish();
 		
 		//saveToFile("database.txt", db);
-
-		
-		
 	}
 }

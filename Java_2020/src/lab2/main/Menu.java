@@ -328,20 +328,20 @@ public final class Menu {
 						if (Ungulates.defOpenAirAviary != db.arrayOpenAirAviary.get(0))
 							Ungulates.defOpenAirAviary = db.arrayOpenAirAviary.get(0);
 						Ungulates tmp2 = new Ungulates(name,type,weight,age);
-						Main.logsWrite("Menu: created new Waterfowl animal: " + tmp2.getId());
+						Main.logsWrite("Menu: created new Ungulates animal: " + tmp2.getId());
 						break;
 					case 3:
 						if (Feathered.defMeshAviary != db.arrayMeshAviary.get(0))
 							Feathered.defMeshAviary = db.arrayMeshAviary.get(0);
 						Feathered tmp3 = new Feathered(name,type,weight,age);
-						Main.logsWrite("Menu: created new Waterfowl animal: " + tmp3.getId());
+						Main.logsWrite("Menu: created new Feathered animal: " + tmp3.getId());
 						
 						break;
 					case 4:
 						if(ColdBlooded.defInfraredLightedAviary != db.arrayInfraredLightedAviary.get(0))
 							ColdBlooded.defInfraredLightedAviary = db.arrayInfraredLightedAviary.get(0);
 						ColdBlooded tmp4 = new ColdBlooded(name,type,weight,age);
-						Main.logsWrite("Menu: created new Waterfowl animal: " + tmp4.getId());
+						Main.logsWrite("Menu: created new ColdBlooded animal: " + tmp4.getId());
 						break;
 					default:
 						break;

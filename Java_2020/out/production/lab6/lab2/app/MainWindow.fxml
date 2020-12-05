@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lab2.app.MainWindowController">
+   <children>
+      <Button fx:id="newAviaryButton" layoutX="210.0" layoutY="11.0" maxHeight="25.0" maxWidth="100.0" minHeight="25.0" minWidth="100.0" mnemonicParsing="false" onAction="#openCreatingAviaryWindow" prefHeight="25.0" prefWidth="100.0" text="New aviary">
+         <font>
+            <Font name="Century Gothic" size="10.0" />
+         </font>
+      </Button>
+      <Button fx:id="newAnimalButton" layoutX="330.0" layoutY="11.0" maxHeight="25.0" maxWidth="100.0" minHeight="25.0" minWidth="100.0" mnemonicParsing="false" onAction="#openCreatingAnimalWindow" prefHeight="25.0" prefWidth="100.0" text="New animal">
+         <font>
+            <Font name="Century Gothic" size="10.0" />
+         </font>
+      </Button>
+      <Button fx:id="moveAnimalButton" layoutX="570.0" layoutY="11.0" maxHeight="25.0" maxWidth="100.0" minHeight="25.0" minWidth="100.0" mnemonicParsing="false" onAction="#openMovingAnimalWindow" prefHeight="25.0" prefWidth="100.0" text="Move animal">
+         <font>
+            <Font name="Century Gothic" size="10.0" />
+         </font></Button>
+      <Pane layoutY="44.0" prefHeight="556.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="44.0">
+         <children>
+            <TableView fx:id="animalTable" layoutX="200.0" layoutY="1.0" prefHeight="550.0" prefWidth="600.0">
+              <columns>
+                <TableColumn fx:id="animalTableId" prefWidth="120.0" resizable="false" text="Id" />
+                  <TableColumn fx:id="animalTableName" prefWidth="120.0" resizable="false" text="Name" />
+                  <TableColumn fx:id="animalTableType" prefWidth="120.0" resizable="false" text="Type" />
+                  <TableColumn fx:id="animalTableWeight" prefWidth="120.0" resizable="false" text="Weight" />
+                  <TableColumn fx:id="animalTableAge" prefWidth="120.0" resizable="false" text="Age" />
+              </columns>
+            </TableView>
+            <ListView fx:id="aviaryList" layoutY="26.0" onMouseClicked="#showAnimals" prefHeight="525.0" prefWidth="200.0" />
+            <ComboBox fx:id="aviaryChoose" layoutY="1.0" maxHeight="26.0" maxWidth="200.0" minHeight="19.0" minWidth="156.0" onAction="#reloadTables" prefHeight="26.0" prefWidth="200.0" promptText="Choose type of aviary">
+            <items>
+               <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Aquarium" />
+                  <String fx:value="Open air" />
+                  <String fx:value="Mesh" />
+                  <String fx:value="Infrared lighted" />
+               </FXCollections>
+            </items>
+            </ComboBox>
+         </children>
+      </Pane>
+      <Button fx:id="reload" layoutX="690.0" layoutY="11.0" maxHeight="25.0" maxWidth="100.0" minHeight="25.0" minWidth="100.0" mnemonicParsing="false" onAction="#reloadTables" prefHeight="25.0" prefWidth="100.0" text="Reload">
+         <font>
+            <Font name="Century Gothic" size="10.0" />
+         </font>
+      </Button>
+      <Button fx:id="removeAnimalButton" layoutX="450.0" layoutY="11.0" maxHeight="25.0" maxWidth="100.0" minHeight="25.0" minWidth="100.0" mnemonicParsing="false" onAction="#openRemovingAnimalWindow" prefHeight="25.0" prefWidth="100.0" text="Remove animal">
+         <font>
+            <Font name="Century Gothic" size="10.0" />
+         </font>
+      </Button>
+      <MenuBar fx:id="menuBar" layoutY="1.0" prefHeight="26.0" prefWidth="50.0">
+        <menus>
+          <Menu fx:id="menu" mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="menuLoad" mnemonicParsing="false" onAction="#loadDB" text="Load" />
+                  <MenuItem fx:id="menuSave" mnemonicParsing="false" onAction="#saveDB" text="Save" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

@@ -1,0 +1,345 @@
+2020-11-07 19:50:45:	Main: Start programm
+2020-11-07 19:50:45:	Main: Call func showStartInfo
+2020-11-07 19:50:45:	Main: call createUsers
+2020-11-07 19:50:45:	Main: createUsers succesfully ended
+2020-11-07 19:50:47:	Menu: get login from keyboard: admin
+2020-11-07 19:50:48:	Menu: get password from keyboard: admin
+2020-11-07 19:50:48:	Menu: login and password correct
+2020-11-07 19:51:18:	Main: call loadFromFile
+2020-11-07 19:51:18:	Main: loadFormFile succefully ended
+2020-11-07 19:51:18:	Menu: start run
+2020-11-07 19:51:47:	Menu: exit
+2020-11-07 19:51:47:	
+
+Program finished without errors.
+2020-11-19 11:27:39:	Main: Start programm
+2020-11-19 11:27:39:	Main: Call func showStartInfo
+2020-11-19 11:27:39:	Main: call createUsers
+2020-11-19 11:27:39:	Main: createUsers succesfully ended
+2020-11-19 11:27:42:	Menu: get login from keyboard: admin
+2020-11-19 11:27:43:	Menu: get password from keyboard: admin
+2020-11-19 11:27:43:	Menu: login and password correct
+2020-11-19 11:28:02:	Main: Start programm
+2020-11-19 11:28:02:	Main: Call func showStartInfo
+2020-11-19 11:28:02:	Main: call createUsers
+2020-11-19 11:28:02:	Main: createUsers succesfully ended
+2020-11-19 11:28:04:	Menu: get login from keyboard: admin
+2020-11-19 11:28:05:	Menu: get password from keyboard: admin
+2020-11-19 11:28:05:	Menu: login and password correct
+2020-11-19 11:31:17:	Main: Start programm
+2020-11-19 11:31:17:	Main: Call func showStartInfo
+2020-11-19 11:31:17:	Main: call createUsers
+2020-11-19 11:31:17:	Main: createUsers succesfully ended
+2020-11-19 11:31:19:	Menu: get login from keyboard: admin
+2020-11-19 11:31:20:	Menu: get password from keyboard: admin
+2020-11-19 11:31:20:	Menu: login and password correct
+2020-11-19 11:31:55:	Main: call loadFromFile
+2020-11-19 11:31:55:	Main: loadFormFile succefully ended
+2020-11-19 11:31:55:	Menu: start run
+2020-11-19 11:33:08:	EXCEPTION: no int nums ! 
+2020-11-19 11:33:08:	EXCEPTION: null
+2020-11-19 11:33:08:	EXCEPTION: no int nums ! 
+2020-11-19 11:33:12:	Main: Start programm
+2020-11-19 11:33:12:	Main: Call func showStartInfo
+2020-11-19 11:33:12:	Main: call createUsers
+2020-11-19 11:33:12:	Main: createUsers succesfully ended
+2020-11-19 11:33:16:	Menu: get login from keyboard: admin
+2020-11-19 11:33:17:	Menu: get password from keyboard: admin
+2020-11-19 11:33:17:	Menu: login and password correct
+2020-11-19 11:33:52:	Main: call loadFromFile
+2020-11-19 11:33:52:	Main: loadFormFile succefully ended
+2020-11-19 11:33:52:	Menu: start run
+2020-11-19 11:33:59:	Main: call saveSettings
+2020-11-19 11:33:59:	Main: saveSettings succesfully ended
+2020-11-19 11:33:59:	Menu: autotestMode changed to: false
+2020-11-19 15:51:49:	EXCEPTION: For input string: "LINKEDLIST n = 10"
+2020-11-19 15:51:49:	EXCEPTION: For input string: "LINKEDLIST n = 10"
+2020-11-19 15:53:17:	EXCEPTION: For input string: "LINKEDLIST n = 10"
+2020-11-19 15:53:18:	EXCEPTION: For input string: "LINKEDLIST n = 10"
+2020-11-19 15:53:46:	EXCEPTION: For input string: "LINKEDLIST n = 10"
+2020-11-19 15:53:46:	EXCEPTION: For input string: "LINKEDLIST n = 10"
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:26:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:26:	EXCEPTION: null
+2020-11-21 10:12:27:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:27:	EXCEPTION: null
+2020-11-21 10:12:27:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:27:	EXCEPTION: null
+2020-11-21 10:12:27:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:27:	EXCEPTION: null
+2020-11-21 10:12:27:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:27:	EXCEPTION: null
+2020-11-21 10:12:27:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:27:	EXCEPTION: null
+2020-11-21 10:12:27:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:27:	EXCEPTION: null
+2020-11-21 10:12:27:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:27:	EXCEPTION: null
+2020-11-21 10:12:27:	EXCEPTION: no int nums ! 
+2020-11-21 10:12:27:	EXCEPTION: null
+2020-11-21 10:14:07:	EXCEPTION: Number shouldn't be begger then 4 !
+2020-11-21 10:14:10:	EXCEPTION: no int nums ! 
+2020-11-21 12:37:59:	EXCEPTION: Number shouldn't be begger then 7 !
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
+2020-11-21 12:38:25:	EXCEPTION: no int nums ! 
+2020-11-21 12:38:25:	EXCEPTION: null
